@@ -27,7 +27,7 @@ with open('./north_data/orders_data.csv') as f:
         list_from_orders_data.append(change_list_to_tuple)
 
     # подключение к БД
-conn = psycopg2.connect(host='localhost', database='north', user='postgres', password='Suka')
+conn = psycopg2.connect(host='localhost', database='north', user='postgres', password='1234')
 cur = conn.cursor()  # включить курсор
 cur.executemany('INSERT INTO employees VALUES (%s, %s, %s, %s, %s, %s)',
                 list_from_employees_data[1:])  # добавление данных в таблицу
